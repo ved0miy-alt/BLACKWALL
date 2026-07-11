@@ -10,3 +10,6 @@
   <img src="demo.gif" alt="Demo" width="700">
 
 </p>
+<p align="center">
+  demo v0.1.1 alpha
+</p>
