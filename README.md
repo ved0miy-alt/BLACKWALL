@@ -21,3 +21,16 @@
 - **Math**: glam
 - **UI**: egui
 - **Language**: Rust (stable)
+
+## Network Parameters
+
+The engine generates the procedural world based on these parameters:
+
+- **density**
+- **chaos**
+- **flow**
+- **entropy**
+- **packet_rate**
+- **energy**
+- **frequency**
+- **curvature**
