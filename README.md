@@ -13,3 +13,11 @@
 <p align="center">
   demo v0.1.1 alpha
 </p>
+
+## Technology Stack
+
+- **Graphics**: wgpu (Vulkan/Metal/DX12)
+- **Windowing**: winit
+- **Math**: glam
+- **UI**: egui
+- **Language**: Rust (stable)
