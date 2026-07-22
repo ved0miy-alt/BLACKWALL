@@ -14,6 +14,28 @@
   demo v0.1.1 alpha
 </p>
 
+## Features
+
+- **Dual Mode Operation**
+  - `cyberspace-sim`: Procedural simulation mode
+  - `cyberspace-net`: Real network traffic capture mode (with fallback)
+  
+- **GPU-Accelerated Rendering**
+  - wgpu-based rendering pipeline
+  - Real-time point generation and animation
+  - Bloom-free point rendering with fog effects
+  
+- **Dynamic Visualization**
+  - Network parameters drive procedural generation
+  - Continuous animation with minimum speed constraints
+  - Static line directions for visual stability
+  
+- **Interactive Camera**
+  - WASD movement
+  - Mouse look
+  - Shift for fast movement
+  - Space/Ctrl for vertical movement
+
 ## Technology Stack
 
 - **Graphics**: wgpu (Vulkan/Metal/DX12)
@@ -26,15 +48,14 @@
 
 The engine generates the procedural world based on these parameters:
 
-- **density**
-- **chaos**
-- **flow**
-- **entropy**
-- **packet_rate**
-- **energy**
-- **frequency**
-- **curvature**
-
+- **density** - controls point density
+- **chaos** - increases distortion
+- **flow** - bends space direction
+- **entropy** - randomness factor
+- **packet_rate** - activity level
+- **energy** - brightness multiplier
+- **frequency** - oscillation speed
+- **curvature** - geometric distortion
 
 ## Threading
 ```
@@ -48,3 +69,54 @@ Network Thread (100ms interval)
                    │
                    └─→ Chunk Generation
 ```
+
+## Building
+
+### Basic Build (Simulation Only)
+
+```bash
+cargo build --release
+```
+
+### Build with Network Capture
+
+```bash
+cargo build --release --features network-capture
+```
+
+Note: Network capture requires pcap library and may need elevated permissions.
+
+## Running
+
+### Simulation Mode
+```bash
+./target/release/cyberspace-sim
+```
+
+### Network Traffic Mode
+```bash
+./target/release/cyberspace-net
+```
+
+## Controls
+
+- **WASD** - Move
+- **Mouse** - Look around
+- **Shift** - Fast movement
+- **Space** - Move up
+- **Ctrl** - Move down
+- **F1** - Toggle debug UI
+- **Escape** - Release cursor / Exit
+
+## Dependencies
+
+- Rust 1.70+
+- wgpu 0.19
+- winit 0.29
+- egui 0.27
+- pcap 1.1 (optional, for network capture)
+
+## License
+
+See LICENSE file for details.
+
