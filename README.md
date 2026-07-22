@@ -98,16 +98,6 @@ Note: Network capture requires pcap library and may need elevated permissions.
 ./target/release/cyberspace-net
 ```
 
-## Controls
-
-- **WASD** - Move
-- **Mouse** - Look around
-- **Shift** - Fast movement
-- **Space** - Move up
-- **Ctrl** - Move down
-- **F1** - Toggle debug UI
-- **Escape** - Release cursor / Exit
-
 ## Dependencies
 
 - Rust 1.70+
@@ -115,8 +105,4 @@ Note: Network capture requires pcap library and may need elevated permissions.
 - winit 0.29
 - egui 0.27
 - pcap 1.1 (optional, for network capture)
-
-## License
-
-See LICENSE file for details.
 
