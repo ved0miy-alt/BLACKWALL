@@ -29,13 +29,12 @@
   - Network parameters drive procedural generation
   - Continuous animation with minimum speed constraints
   - Static line directions for visual stability
-  
-- **Interactive Camera**
-  - WASD movement
-  - Mouse look
-  - Shift for fast movement
-  - Space/Ctrl for vertical movement
 
+## In future update:
+
+1. Migration to Unreal Engine 5.8
+2. Creation of online servers for cyberspace
+   
 ## Technology Stack
 
 - **Graphics**: wgpu (Vulkan/Metal/DX12)
@@ -48,14 +47,14 @@
 
 The engine generates the procedural world based on these parameters:
 
-- **density** - controls point density
-- **chaos** - increases distortion
-- **flow** - bends space direction
-- **entropy** - randomness factor
-- **packet_rate** - activity level
-- **energy** - brightness multiplier
-- **frequency** - oscillation speed
-- **curvature** - geometric distortion
+- **density**
+- **chaos**
+- **flow**
+- **entropy**
+- **packet_rate**
+- **energy**
+- **frequency**
+- **curvature**
 
 ## Threading
 ```
