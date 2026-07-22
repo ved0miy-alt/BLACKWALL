@@ -34,3 +34,17 @@ The engine generates the procedural world based on these parameters:
 - **energy**
 - **frequency**
 - **curvature**
+
+
+## Threading
+```
+Network Thread (100ms interval)
+    │
+    ├─→ Generate Parameters
+    │
+    └─→ Send via Channel
+           │
+           └─→ Main Thread (reads parameters)
+                   │
+                   └─→ Chunk Generation
+```
